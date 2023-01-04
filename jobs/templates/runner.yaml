@@ -26,6 +26,9 @@
           name: BROWSER_VERSION
           default: 107.0
           description: Browser version
+      - string:
+          name: GRID_URL
+          default: http://127.0.0.1.4445
       - extended-choice:
             name: TEST_TYPE
             description: Tests type

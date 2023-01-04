@@ -18,7 +18,8 @@ timeout(60) {
                                     string(name: 'BRANCH', value: BRANCH),
                                     string(name: 'BASE_URL', value: BASE_URL),
                                     string(name: 'BROWSER', value: BROWSER),
-                                    string(name: 'BROWSER_VERSION', value: BROWSER_VERSION)
+                                    string(name: 'BROWSER_VERSION', value: BROWSER_VERSION),
+                                    string(name: 'GRID_URL', value: GRID_URL)
                                 ])
                             }
                         } else {
