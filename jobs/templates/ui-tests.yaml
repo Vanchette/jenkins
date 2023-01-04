@@ -1,0 +1,41 @@
+- job-template:
+    name: 'ui-tests'
+    description: '<h3 style="color:#999696;">UI tests</h3>'
+    project-type: pipeline
+    concurrent: true
+    logrotate:
+      daysToKeep: 30
+      numToKeep: 10
+    properties:
+      - build-discarder:
+          num-to-keep: 100
+    parameters:
+      - string:
+          name: BRANCH
+          default: master
+          description: Branch for tempest barbican UI tests
+      - string:
+          name: BASE_URL
+          default: https://otus.ru
+          description: Base url
+      - string:
+          name: BROWSER
+          default: chrome
+          description: Browxser name
+      - string:
+          name: BROWSER_VERSION
+          default: 107.0
+          description: Browser version
+    pipeline-scm:
+      scm:
+      - git-ui-tests
+      script-path: jenkins/ui-tests.groovy
+    publishers:
+      - allure:
+        results-paths:
+        - path: 'allure-results'
+        properties:
+        - jdk: openjdk1.8
+        commandline: allure2
+        report-build-policy: UNSTABLE
+        include-properties: true

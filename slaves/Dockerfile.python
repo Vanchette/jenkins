@@ -1,0 +1,27 @@
+FROM jenkins/agent
+
+USER root
+
+ENV TZ=Europe/Moscow
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
+    && echo $TZ > /etc/timezone \
+    && apt-get update -y \
+    && apt-get upgrade -y \
+    && apt-get install -y \
+        python3-pip \
+        python-dev \
+        jq \
+        psmisc \
+        wget \
+        iputils-ping \
+        curl \
+    && pip3 install virtualenv \
+    && pip3 install -U pip \
+    && alias pip=pip3 \
+    && pip3 install -U \
+        pip \
+        python-heatclient \
+        python-openstackclient ansible jenkins-job-builder>=3.11.0
+
+RUN pip3 install -U tempest==30.1.0
