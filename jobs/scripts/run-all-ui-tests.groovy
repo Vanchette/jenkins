@@ -1,7 +1,7 @@
 timeout(60) {
     node('maven-slave') {
         stage('Checkout') {
-            git branch: "$BRANCH", credentialsId: 'jenkins', url: 'git@github.com:saint88/jenkins.git'
+            git branch: "$BRANCH", credentialsId: 'jenkins', url: 'git@github.com:Vanchette/jenkins.git'
         }
         stage('Run tests') {
             def jobs = [:]
