@@ -13,7 +13,7 @@
       - string:
           name: BRANCH
           default: master
-          description: Branch for tempest barbican UI tests
+          description: Branch for tempest
       - string:
           name: BASE_URL
           default: https://otus.ru
