@@ -38,8 +38,8 @@ timeout(60) {
                                 build(job: 'api-tests',
                                 parameters: [
                                     string(name: 'BRANCH', value: BRANCH),
-                                    string(name: 'BASE_URL', value: BASE_URL),
-                                    string(name: 'URL', value: URL),
+                                    string(name: 'API_URL', value: API_URL),
+                                    string(name: 'SUB_URL', value: SUB_URL),
                                     string(name: 'USER_STATUS', value: USER_STATUS),
                                     string(name: 'EMAIL', value: EMAIL),
                                     string(name: 'ID', value: ID),
