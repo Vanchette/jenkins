@@ -21,7 +21,7 @@
       - string:
           name: BROWSER
           default: chrome
-          description: Browxser name
+          description: Browser
       - string:
           name: BROWSER_VERSION
           default: 107.0
