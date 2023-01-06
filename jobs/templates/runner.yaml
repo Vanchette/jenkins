@@ -29,6 +29,46 @@
       - string:
           name: GRID_URL
           default: http://127.0.0.1.4445
+      - string:
+          name: API_URL
+          default: https://petstore.swagger.io/v2
+          description: test api url
+      - string:
+          name: URL
+          default: /user
+          description: url for request
+      - string:
+          name: USER_STATUS
+          default: 100
+          description: UserDTO
+      - string:
+          name: EMAIL
+          default: emailIvan@rambler.ru
+          description: UserDTO
+      - string:
+          name: ID
+          default: 300
+          description: UserDTO
+      - string:
+          name: FIRST_NAME
+          default: Ivan
+          description: UserDTO
+      - string:
+          name: LAST_NAME
+          default: Petrov
+          description: UserDTO
+      - string:
+          name: PHONE
+          default: 9379992
+          description: UserDTO
+      - string:
+          name: PASSWORD
+          default: qwertyuiop1234
+          description: UserDTO
+      - string:
+          name: USERNAME
+          default: ivan2000
+          description: UserDTO
       - extended-choice:
             name: TEST_TYPE
             description: Tests type
