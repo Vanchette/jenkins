@@ -41,3 +41,6 @@
       scm:
       - git-ui-tests
       script-path: jenkins/ui-tests.groovy
+      scm:
+      - git-api-tests
+      script-path: jenkins/api-tests.groovy

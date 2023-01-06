@@ -8,6 +8,7 @@
     filter-queue: true
     job-name:
       - 'ui-tests'
+      - 'api-tests'
       - 'runner-tests'
     columns:
       - status

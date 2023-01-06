@@ -2,8 +2,9 @@
 
 - project:
     name: 'Autotests'
-    job-description: '<h4 style="color:#999696;">UI tests</h4>'
+    job-description: '<h4 style="color:#999696;">QA tests</h4>'
     jobs:
       - 'ui-tests'
+      - 'api-tests'
       - 'runner-tests'
 ...
