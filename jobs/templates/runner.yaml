@@ -34,7 +34,7 @@
           default: https://petstore.swagger.io/v2
           description: test api url
       - string:
-          name: URL
+          name: SUB_URL
           default: /user
           description: url for request
       - string:
@@ -43,7 +43,7 @@
           description: UserDTO
       - string:
           name: EMAIL
-          default: emailIvan@rambler.ru
+          default: 'emailIvan@rambler.ru'
           description: UserDTO
       - string:
           name: ID

@@ -19,7 +19,7 @@
           default: https://petstore.swagger.io/v2
           description: Base url
       - string:
-          name: URL
+          name: SUB_URL
           default: /user
           description: url for request
       - string:
