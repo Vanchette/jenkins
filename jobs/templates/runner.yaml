@@ -75,8 +75,8 @@
             quote-value: false
             visible-items: 3
             type: multi-select
-            default-value: api,ui,mobile
-            value: api,ui,mobile
+            default-value: ui,api,mobile
+            value: ui,api,mobile
     pipeline-scm:
       scm:
       - git-ui-tests
