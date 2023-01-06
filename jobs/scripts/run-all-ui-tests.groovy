@@ -30,6 +30,34 @@ timeout(60) {
                 }
             }
 
+            jobs['api_tests'] = {
+                    node('maven-slave') {
+                    stage('API tests on chrome') {
+                        if('api' in runnerJobs) {
+                            catchError(buildResult: 'SUCCESS', stageResult: 'UNSTABLE') {
+                                build(job: 'api-tests',
+                                parameters: [
+                                    string(name: 'BRANCH', value: BRANCH),
+                                    string(name: 'BASE_URL', value: BASE_URL),
+                                    string(name: 'URL', value: URL),
+                                    string(name: 'USER_STATUS', value: USER_STATUS),
+                                    string(name: 'EMAIL', value: EMAIL),
+                                    string(name: 'ID', value: ID),
+                                    string(name: 'FIRST_NAME', value: FIRST_NAME),
+                                    string(name: 'LAST_NAME', value: LAST_NAME),
+                                    string(name: 'PHONE', value: PHONE),
+                                    string(name: 'PASSWORD', value: PASSWORD),
+                                    string(name: 'USERNAME', value: USERNAME)
+                                ])
+                            }
+                        } else {
+                            echo 'Skipping stage...'
+                            Utils.markStageSkippedForConditional('keystone api tests')
+                        }
+                    }
+                }
+            }
+
             parallel jobs
         }
     }
